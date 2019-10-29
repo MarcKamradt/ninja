@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6D76F3BE-6D04-4F06-856E-F17A7DD1A841}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>ninja.bootstrap.exe</NMakeBuildCommandLine>
+    <NMakeOutput>ninja.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeBuildCommandLine>ninja.bootstrap.exe</NMakeBuildCommandLine>
+    <NMakeOutput>ninja.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>ninja.bootstrap.exe</NMakeBuildCommandLine>
+    <NMakeOutput>ninja.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeBuildCommandLine>ninja.bootstrap.exe</NMakeBuildCommandLine>
+    <NMakeOutput>ninja.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\browse.cc" />
+    <ClCompile Include="src\build.cc" />
+    <ClCompile Include="src\build_log.cc" />
+    <ClCompile Include="src\build_log_perftest.cc" />
+    <ClCompile Include="src\build_log_test.cc" />
+    <ClCompile Include="src\build_test.cc" />
+    <ClCompile Include="src\canon_perftest.cc" />
+    <ClCompile Include="src\clean.cc" />
+    <ClCompile Include="src\clean_test.cc" />
+    <ClCompile Include="src\clparser.cc" />
+    <ClCompile Include="src\clparser_perftest.cc" />
+    <ClCompile Include="src\clparser_test.cc" />
+    <ClCompile Include="src\debug_flags.cc" />
+    <ClCompile Include="src\depfile_parser.cc" />
+    <ClCompile Include="src\depfile_parser.in.cc" />
+    <ClCompile Include="src\depfile_parser_perftest.cc" />
+    <ClCompile Include="src\depfile_parser_test.cc" />
+    <ClCompile Include="src\deps_log.cc" />
+    <ClCompile Include="src\deps_log_test.cc" />
+    <ClCompile Include="src\disk_interface.cc" />
+    <ClCompile Include="src\disk_interface_test.cc" />
+    <ClCompile Include="src\edit_distance.cc" />
+    <ClCompile Include="src\edit_distance_test.cc" />
+    <ClCompile Include="src\eval_env.cc" />
+    <ClCompile Include="src\getopt.c" />
+    <ClCompile Include="src\graph.cc" />
+    <ClCompile Include="src\graphviz.cc" />
+    <ClCompile Include="src\graph_test.cc" />
+    <ClCompile Include="src\hash_collision_bench.cc" />
+    <ClCompile Include="src\includes_normalize-win32.cc" />
+    <ClCompile Include="src\includes_normalize_test.cc" />
+    <ClCompile Include="src\lexer.cc" />
+    <ClCompile Include="src\lexer.in.cc" />
+    <ClCompile Include="src\lexer_test.cc" />
+    <ClCompile Include="src\line_printer.cc" />
+    <ClCompile Include="src\manifest_parser.cc" />
+    <ClCompile Include="src\manifest_parser_perftest.cc" />
+    <ClCompile Include="src\manifest_parser_test.cc" />
+    <ClCompile Include="src\metrics.cc" />
+    <ClCompile Include="src\minidump-win32.cc" />
+    <ClCompile Include="src\msvc_helper-win32.cc" />
+    <ClCompile Include="src\msvc_helper_main-win32.cc" />
+    <ClCompile Include="src\msvc_helper_test.cc" />
+    <ClCompile Include="src\ninja.cc" />
+    <ClCompile Include="src\ninja_test.cc" />
+    <ClCompile Include="src\state.cc" />
+    <ClCompile Include="src\state_test.cc" />
+    <ClCompile Include="src\string_piece_util.cc" />
+    <ClCompile Include="src\string_piece_util_test.cc" />
+    <ClCompile Include="src\subprocess-posix.cc" />
+    <ClCompile Include="src\subprocess-win32.cc" />
+    <ClCompile Include="src\subprocess_test.cc" />
+    <ClCompile Include="src\test.cc" />
+    <ClCompile Include="src\util.cc" />
+    <ClCompile Include="src\util_test.cc" />
+    <ClCompile Include="src\version.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\browse.h" />
+    <ClInclude Include="src\build.h" />
+    <ClInclude Include="src\build_log.h" />
+    <ClInclude Include="src\clean.h" />
+    <ClInclude Include="src\clparser.h" />
+    <ClInclude Include="src\debug_flags.h" />
+    <ClInclude Include="src\depfile_parser.h" />
+    <ClInclude Include="src\deps_log.h" />
+    <ClInclude Include="src\disk_interface.h" />
+    <ClInclude Include="src\edit_distance.h" />
+    <ClInclude Include="src\eval_env.h" />
+    <ClInclude Include="src\exit_status.h" />
+    <ClInclude Include="src\getopt.h" />
+    <ClInclude Include="src\graph.h" />
+    <ClInclude Include="src\graphviz.h" />
+    <ClInclude Include="src\hash_map.h" />
+    <ClInclude Include="src\includes_normalize.h" />
+    <ClInclude Include="src\lexer.h" />
+    <ClInclude Include="src\line_printer.h" />
+    <ClInclude Include="src\manifest_parser.h" />
+    <ClInclude Include="src\metrics.h" />
+    <ClInclude Include="src\msvc_helper.h" />
+    <ClInclude Include="src\state.h" />
+    <ClInclude Include="src\string_piece.h" />
+    <ClInclude Include="src\string_piece_util.h" />
+    <ClInclude Include="src\subprocess.h" />
+    <ClInclude Include="src\test.h" />
+    <ClInclude Include="src\timestamp.h" />
+    <ClInclude Include="src\util.h" />
+    <ClInclude Include="src\version.h" />
+    <ClInclude Include="src\win32port.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\browse.py" />
+    <None Include="src\gen_doxygen_mainpage.sh" />
+    <None Include="src\inline.sh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
